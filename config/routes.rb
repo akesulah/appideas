@@ -1,8 +1,11 @@
 Appideas::Application.routes.draw do
   root 'ideas#index'
 
-  resources :keywords
-  resources :ideas
+  resources :keywords, :ideas
+
+  namespace :api, defaults: {format: :json} do
+    resources :ideas, :keywords, only: [:index, :create, :update, :destroy]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

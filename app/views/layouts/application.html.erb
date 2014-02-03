@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app='AppIdeas'>
+  <body>
+
+    <%= yield %>
+
+  <h1>Watchlist</h1>
+  <form>
+    <input type="text" ng-model='newSymbol' placeholder="Enter a symbol">
+    <input type="submit" value="Add">
+  </form>
+  {{ newSymbol }}
+
+  </body>
+</html>
+
+
