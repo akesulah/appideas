@@ -27,9 +27,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'coveralls', require: false
 
-gem 'haml'
-
-gem 'haml-rails'
+#gem 'haml-rails'
 
 gem 'twitter-bootstrap-rails'
 
