@@ -21,3 +21,6 @@
 
 # Spork related files?
 **/.keep
+
+/public/assets
+/public/javascripts

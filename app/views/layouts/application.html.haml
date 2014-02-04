@@ -1,5 +1,5 @@
 !!! 5
-%html{:lang => "en", :ng-app => 'AppIdeas'}
+%html{ 'ng-app' => true }
   %head
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
@@ -16,6 +16,7 @@
     = favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
+    -#%script{ src: "https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js" }
     -# Glypicons link
     %link{:href => "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css", :rel => "stylesheet"}/
 
@@ -25,9 +26,9 @@
         .container-fluid
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
             %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          -#%a.brand(href="#") Appideas
+              %span.icon-bar
+                %span.icon-bar
+                  -#%a.brand(href="#") Appideas
           -# TODO Fix this quick fix when a better way presents itself 
           = link_to "Appideas", root_url, class: "brand"
           .container.nav-collapse
@@ -37,42 +38,11 @@
               %li= link_to "New Idea", new_idea_path
 
 
-    .container-fluid
-
-      .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Keywords
-              - @words.each do |keyword|                                     
-                %span
-                  %li
-                    = link_to keyword.name, ideas_path(:kw => keyword)
-                    - if request.path.include? "ideas" and request.path =~ /\d/
-                      = link_to t('.update', :default => ""), idea_path(id: request.path.match(/\d+/i), remove_id: keyword.id), :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'glyphicon glyphicon-remove btn-danger'
-              %p
-              - if request.path.match(/ideas\/\d+/i)
-                .btn-group
-                  %button.btn.btn-default.btn-sm.dropdown-toggle{"data-toggle" => "dropdown", type: "button"}
-                    Add Keyword
-                    %span.caret
-                  %ul.dropdown-menu{role: "manu"}
-                    - @all.each do |keyword|
-                      %li
-                        - if @words.include? keyword
-                          = link_to raw('<i class="icon-ok icon-green"></i>') + keyword.name, ""
-                        - else
-                          = link_to keyword.name, idea_path(id: request.path.match(/\d+/i), keyword_id: keyword.id)
-        .span6
-          = bootstrap_flash
           = yield
-        .span3
-          .well.sidebar-nav
-    
+
       %footer
-        %h3 Angular
-        %form
-          %input{:type => "text", :ng-model => "newSymbol", :placeholder => "Enter a symbol"}
-          %input{:type => "submit", :value => "Add"}
-        {{ newSymbol }}
         %p &copy; tktl-appideas
+        %form
+          %input{ 'type' => 'text', 'ng-model' => 'name' }
+        %p
+          Hello {{ name }}

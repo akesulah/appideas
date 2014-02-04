@@ -35,6 +35,10 @@ gem 'twitter-bootstrap-rails'
 
 gem 'rails_autolink'
 
+gem 'rb-readline'
+
+gem 'angularjs-rails'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -48,6 +52,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'guard-spork'
+  gem 'guard-sprockets'
   gem 'guard-livereload', require: false
   gem 'foreman'
 end
