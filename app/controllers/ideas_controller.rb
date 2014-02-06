@@ -123,6 +123,7 @@ class IdeasController < ApplicationController
     params.require(:idea).permit(:name, :desc)
   end
   
+<<<<<<< HEAD
   def upvote
     #@idea = idea.find(params[:id])
   	#@idea.liked_by @user1
@@ -131,6 +132,14 @@ class IdeasController < ApplicationController
   
   def downvote
   	#@idea.downvote_from @user1
+=======
+  def vote_up
+  	@idea.liked_by @user1
+  end
+  
+  def vote_down
+  	@idea.downvote_from @user1
+>>>>>>> parent of 7b8f8d8... last version
   end
 
 end
