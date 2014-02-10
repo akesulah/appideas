@@ -130,7 +130,6 @@ However, since Bitcoin is not officially a currency, one could establish a bitoi
 i9 = Idea.create name:"Any small Leaflet.js -projects?", desc:"Hi, 
 Has anybody done any small projects with e.g. mysql+css+ruby+leafy.js? I'm planning to, but it would be great to continue from where somebody left off."
 
-ik1 = Idea_keyword.create idea_id:1, keyword_id:1
 
 
 
