@@ -1,0 +1,3 @@
+[submodule "app/appideas-front"]
+	path = app/appideas-front
+	url = https://github.com/tktl-app-ideas/appideas-front

@@ -27,9 +27,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'coveralls', require: false
 
-gem 'haml'
-
-gem 'haml-rails'
+#gem 'haml-rails'
 
 gem 'twitter-bootstrap-rails'
 
@@ -40,6 +38,10 @@ gem 'acts_as_votable'
 gem 'acts_as_commentable_with_threading'
 
 gem 'awesome_nested_set'
+
+gem 'rb-readline'
+
+gem 'angularjs-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -53,7 +55,10 @@ group :development do
   gem 'pry-rails'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'guard-spork'
+  gem 'guard-sprockets'
   gem 'guard-livereload', require: false
+  gem 'foreman'
 end
 
 group :development, :test do
@@ -61,6 +66,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'spork-rails'
 end
 
 group :production do

@@ -18,3 +18,8 @@
 
 # Ignore generated code test coverage
 /coverage
+
+# Spork related files?
+**/.keep
+
+/public/*
