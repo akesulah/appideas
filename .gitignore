@@ -23,3 +23,4 @@
 **/.keep
 
 /public/*
+/public/.*
