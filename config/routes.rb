@@ -6,7 +6,7 @@ Appideas::Application.routes.draw do
   #resources :keywords, :ideas
 
   namespace :api, defaults: {format: :json} do
-    resources :ideas, :keywords, only: [:index, :show, :create, :update, :destroy]
+    resources :ideas, :keywords, :comments, only: [:index, :show, :create, :update, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
