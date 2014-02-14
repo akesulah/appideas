@@ -133,6 +133,10 @@ Has anybody done any small projects with e.g. mysql+css+ruby+leafy.js? I'm plann
 c1 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Great!"
 c2 = Comment.create commentable_id:2, commentable_type: "Idea", user_id:1, body:"I don't like this."
 c3 = Comment.create commentable_id:3, commentable_type: "Idea", user_id:1, body:"I must check this later..."
+c4 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Well... I made this first. You're late. Make something new!!!!!"
+c5 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Good idea. ..."
+c6 = Comment.create commentable_id:3, commentable_type: "Idea", user_id:1, body:"Poor idea..."
+
 
 ik1 = Idea_keywords.create idea_id:1, keyword_id:1
 ik2 = Idea_keywords.create idea_id:1, keyword_id:2
