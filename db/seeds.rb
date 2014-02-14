@@ -130,5 +130,18 @@ However, since Bitcoin is not officially a currency, one could establish a bitoi
 i9 = Idea.create name:"Any small Leaflet.js -projects?", desc:"Hi, 
 Has anybody done any small projects with e.g. mysql+css+ruby+leafy.js? I'm planning to, but it would be great to continue from where somebody left off."
 
+c1 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Great!"
+c2 = Comment.create commentable_id:2, commentable_type: "Idea", user_id:1, body:"I don't like this."
+c3 = Comment.create commentable_id:3, commentable_type: "Idea", user_id:1, body:"I must check this later..."
+
+ik1 = Idea_keywords.create idea_id:1, keyword_id:1
+ik2 = Idea_keywords.create idea_id:1, keyword_id:2
+ik3 = Idea_keywords.create idea_id:1, keyword_id:3
+ik4 = Idea_keywords.create idea_id:2, keyword_id:1
+ik5 = Idea_keywords.create idea_id:2, keyword_id:3
+ik6 = Idea_keywords.create idea_id:3, keyword_id:4
+
+
+
 
 
