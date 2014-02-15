@@ -132,18 +132,31 @@ Has anybody done any small projects with e.g. mysql+css+ruby+leafy.js? I'm plann
 
 c1 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Great!"
 c2 = Comment.create commentable_id:2, commentable_type: "Idea", user_id:1, body:"I don't like this."
-c3 = Comment.create commentable_id:3, commentable_type: "Idea", user_id:1, body:"I must check this later..."
+c3 = Comment.create commentable_id:3, commentable_type: "Idea", user_id:1, body:"I must check this out later..."
 c4 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Well... I made this first. You're late. Make something new!!!!!"
-c5 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Good idea. ..."
+c5 = Comment.create commentable_id:1, commentable_type: "Idea", user_id:1, body:"Any ideas how to solve this technically? The benefit is really big. But getting the data would be tough. Any ideas?"
 c6 = Comment.create commentable_id:3, commentable_type: "Idea", user_id:1, body:"Poor idea..."
+c7 = Comment.create commentable_id:2, commentable_type: "Idea", user_id:1, body:"For anyone who may see this, I had a similar idea a year ago and have already created. Contact me if you want to know more!"
 
 
-ik1 = Idea_keywords.create idea_id:1, keyword_id:1
-ik2 = Idea_keywords.create idea_id:1, keyword_id:2
-ik3 = Idea_keywords.create idea_id:1, keyword_id:3
-ik4 = Idea_keywords.create idea_id:2, keyword_id:1
-ik5 = Idea_keywords.create idea_id:2, keyword_id:3
-ik6 = Idea_keywords.create idea_id:3, keyword_id:4
+
+
+ik1 = IdeaKeyword.create idea_id:1, keyword_id:1
+ik2 = IdeaKeyword.create idea_id:1, keyword_id:2
+ik3 = IdeaKeyword.create idea_id:1, keyword_id:3
+ik4 = IdeaKeyword.create idea_id:2, keyword_id:1
+ik5 = IdeaKeyword.create idea_id:2, keyword_id:3
+ik6 = IdeaKeyword.create idea_id:3, keyword_id:4
+ik7 = IdeaKeyword.create idea_id:3, keyword_id:5
+ik8 = IdeaKeyword.create idea_id:5, keyword_id:9
+ik9 = IdeaKeyword.create idea_id:5, keyword_id:11
+ik10 = IdeaKeyword.create idea_id:7, keyword_id:16
+ik11 = IdeaKeyword.create idea_id:8, keyword_id:18
+ik12 = IdeaKeyword.create idea_id:9, keyword_id:24
+
+
+
+
 
 
 
