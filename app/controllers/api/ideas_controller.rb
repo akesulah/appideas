@@ -24,5 +24,17 @@ class Api::IdeasController < ApplicationController
   def api_idea_params
     params.require(:idea).permit(:name, :desc, :keywords)
   end
+  
+ # def upvote
+  #	@idea = Idea.find(params[:idea_id])
+		#@idea.liked_by User.first
+		#redirect_to @idea
+	#end
+
+	#def downvote
+  	#@idea = Idea.find(params[:idea_id])
+  	#@idea.downvote_from User.first
+  	#redirect_to @idea
+	#end
 end
 

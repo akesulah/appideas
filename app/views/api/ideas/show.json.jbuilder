@@ -7,6 +7,7 @@
   json.created_at @idea.created_at
   json.updated_at @idea.updated_at
   json.keywords @idea.keywords
+  json.votes @idea.likes.size-@idea.dislikes.size
   json.comments @comments do |comment|
     json.id comment.id
     json.idea_id comment.commentable_id
