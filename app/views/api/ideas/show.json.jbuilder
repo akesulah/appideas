@@ -3,7 +3,8 @@
 #json.idea do
   json.id @idea.id
   json.name @idea.name
-  json.desc simple_format(auto_link(@idea.desc))
+  json.desc @idea.desc
+  json.limitedDesc simple_format(auto_link(@idea.desc))
   json.created_at @idea.created_at
   json.updated_at @idea.updated_at
   json.keywords @idea.keywords
